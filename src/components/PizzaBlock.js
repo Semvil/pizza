@@ -34,7 +34,7 @@ function PizzaBlock(props) {
         </ul>
       </div>
       <div class="pizza-block__bottom">
-        <div class="pizza-block__price">от {props.price}</div>
+        <div class="pizza-block__price">від {props.price}</div>
         <div
           class="button button--outline button--add"
           //   onClick={() => setState(state + 1)}
@@ -52,7 +52,7 @@ function PizzaBlock(props) {
               fill="white"
             />
           </svg>
-          <span>Добавить</span>
+          <span>Добавити</span>
           <i>{plus}</i>
         </div>
       </div>
