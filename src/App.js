@@ -11,12 +11,14 @@ import {
   BrowserRouter,
   Routes,
 } from "react-router-dom";
+import { useState } from "react";
 
 // console.log(data);
 function App() {
+  const [searchValue, setSearchValue] = useState("");
   return (
     <div class="wrapper">
-      <Header />
+      <Header searchValue={searchValue} setSearchValue={setSearchValue} />
       <div class="content">
         <Routes>
           <Route path="/" element={<Home />}></Route>

@@ -1,0 +1,22 @@
+.root {
+  position: relative;
+  left: -120px;
+}
+
+.input {
+  border: solid 1px;
+  border-radius: 5px;
+  padding: 8px 15px;
+  width: 300px;
+  opacity: 0.5;
+  font-size: 16px;
+  padding-left: 30px;
+}
+.icon {
+  width: 18px;
+  height: 18px;
+  opacity: 0.5;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}

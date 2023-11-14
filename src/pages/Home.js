@@ -40,7 +40,7 @@ function Home() {
           <Sort value={sort} setOpen={(id) => setSort(id)} />
         </div>
 
-        <h2 class="content__title">Все пиццы</h2>
+        <h2 class="content__title">Всі піци</h2>
         <div class="content__items">
           {isLoading === true
             ? [...new Array(7)].map(() => <SkeletonPB />)

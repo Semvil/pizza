@@ -29,7 +29,7 @@ function Sort({ value, setOpen }) {
             fill="#2C2C2C"
           />
         </svg>
-        <b>Сортировка по:</b>
+        <b>Сортування по:</b>
         <span onClick={() => setOpenSort(!openSort)}>{value.name}</span>
       </div>
       {openSort && (
