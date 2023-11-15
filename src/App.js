@@ -16,12 +16,18 @@ import { useState } from "react";
 // console.log(data);
 function App() {
   const [searchValue, setSearchValue] = useState("");
+  // console.log(searchValue);
   return (
     <div class="wrapper">
       <Header searchValue={searchValue} setSearchValue={setSearchValue} />
       <div class="content">
         <Routes>
-          <Route path="/" element={<Home />}></Route>
+          <Route
+            path="/"
+            element={
+              <Home searchValue={searchValue} setSearchValue={setSearchValue} />
+            }
+          ></Route>
           <Route path="/cart.html" element={<Cart />}></Route>
           <Route path="*" element={<NotFound />}></Route>
         </Routes>

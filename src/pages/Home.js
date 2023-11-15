@@ -7,7 +7,7 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 
-function Home() {
+function Home({ searchValue, setSearchValue }) {
   const [items, setItems] = useState([]);
   const [isLoading, setLoading] = useState(true);
   const [category, setCategory] = useState(0);
@@ -44,17 +44,24 @@ function Home() {
         <div class="content__items">
           {isLoading === true
             ? [...new Array(7)].map(() => <SkeletonPB />)
-            : items.map((value, index) => (
-                <>
-                  <PizzaBlock
-                    name={value.title}
-                    price={value.price}
-                    image={value.imageUrl}
-                    size={value.sizes}
-                    type={value.types}
-                  />
-                </>
-              ))}
+            : items
+                .filter((value) => {
+                  if (value.title.toLowerCase().includes(searchValue)) {
+                    return true;
+                  }
+                  return false;
+                })
+                .map((value, index) => (
+                  <>
+                    <PizzaBlock
+                      name={value.title}
+                      price={value.price}
+                      image={value.imageUrl}
+                      size={value.sizes}
+                      type={value.types}
+                    />
+                  </>
+                ))}
         </div>
       </div>
       ;
